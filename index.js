@@ -6,9 +6,11 @@ async function fill_form(){
 
   await driver.get("https://www.porschexboxsweepstakes.com");
 
-  await driver.findElement(By.id("fname")).sendKeys("Maxwell", Key.TAB).sendKeys("Alvord", Key.TAB);
+  await driver.findElement(By.id("fname")).sendKeys("Maxwell");
+  await driver.findElement(By.id("lname")).sendKeys("Alvord");
+  await driver.findElement(By.id("email")).sendKeys("maxwellalvord@gmail.com");
+  // await driver.findElement(By.localName("::after")).click();
 
-  // .sendKeys("Alvord", Key.TAB).sendKeys("maxwellalvord@gmail.com");
 
   // await driver.findElement(By.innerHTML("SUBMIT")).click();
   
