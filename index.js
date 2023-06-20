@@ -17,6 +17,7 @@ async function fill_form(){
   await page.type("#fname", "Maxwell");
   await page.type("#lname", "Alvord");
   await page.type("#email", "maxwellalvord@gmail.com");
+  await page.locator('.form-check label').click();
   // await page.screenshot({ path: 'test.png' });
   // await browser.close();
 
