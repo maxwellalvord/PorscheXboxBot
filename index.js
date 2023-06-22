@@ -15,22 +15,27 @@ async function fill_form(){
 
   await page.goto('https://www.porschexboxsweepstakes.com');
 
-  await page.type("#fname", "Maxwell");
-  await page.type("#lname", "Alvord");
-  await page.type("#email", "maxwellalvord@gmail.com");
+  await page.type("#fname", "sarah");
+  await page.waitForTimeout(100);
+  await page.type("#lname", "rice");
+  await page.waitForTimeout(100);
+  await page.type("#email", "sarah.rice2000@gmail.com");
+  await page.waitForTimeout(100);
   await page.locator('.form-check label').click();
-  const interval = setInterval(async function(){
-    await page.locator('.btn.btn-primary').click();
-    console.log('success')
-    timesRun += 1;
-    if(timesRun === 3){
-        clearInterval(interval);
-    }
-  }, 300);
-  setInterval(function(){
-    browser.close();
-    process.kill();
-  }, 1200);
+  await page.waitForTimeout(100);
+  await page.locator('.btn.btn-primary').click();
+  await page.waitForNavigation();
+  // const interval = setInterval(async function(){
+  //     // console.log('success')
+  //     timesRun += 1;
+  //   if(timesRun === 1){
+  //       clearInterval(interval);
+  //   }
+  // }, 300);
+  // setInterval(function(){
+  //   browser.close();
+  //   process.kill();
+  // }, 1200);
   
 }
 
